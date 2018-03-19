@@ -27,15 +27,8 @@ for subj in master_dict:
         if len(section['meetingsFaculty']) == 0: continue
 
         meeting_times = section['meetingsFaculty'][0]['meetingTime']
-
-        #print(meeting_times)
-
         start_date = meeting_times['startDate']
         end_date = meeting_times['endDate']
-
-        #print(days)
-        #print(start_date,end_date)
-
 
         for key,vals in meeting_times.items():
 
@@ -57,7 +50,6 @@ for subj in master_dict:
                     second += dt.timedelta(days=1)
 
                     if(start.weekday() == days_of_week[key]):
-                        #print(subj,str(build)+" "+str(room),start.__format__("%m/%d/%YT%H:%M:00"),start_time,end_time)
                         room_code = str(build)+str(room)
                         event = {
                          'title': subj,
@@ -71,7 +63,6 @@ for subj in master_dict:
                         room_set.add(room_code)
                         #print(room_code,event)
 
-
 #room_list = list(room_set)
 #for room_ in room_list:
 #    out = []
@@ -82,101 +73,3 @@ for subj in master_dict:
 #                out.append(day_dict)
 #    with open(f'C:\\Users\\etmac\\OneDrive\\Desktop\\Programming\\Full Calendar\\rooms\\{room_}.json','w') as file:
 #        file.write( 'var class_ = ' +json.dumps(out,indent=4) + ';')
-# We need to take data that looks like startDate: "startDate": "01/08/2018" and "endDate": "04/28/2018",
-# With days being listen as Monday:True Tuesday:False etc
-# 
-# for meeting in meetinfaculty
-#       take meeting time and day of the week and classroom and dates
-#       iter through startdate to enddate one day at a time
-#       if day in day of week then that class is on that date 
-#  {
-#          title: 'Meeting',
-#          start: '2018-03-12T10:30:00',
-#          end: '2018-03-12T12:30:00'
-#        },
-#
-#
-#
-
-'''
-"id": 89474,
-                "isSectionLinked": false,
-                "linkIdentifier": null,
-                "maximumEnrollment": 40,
-                "meetingsFaculty": [
-                    {
-                        "category": "01",
-                        "class": "net.hedtech.banner.student.schedule.SectionSessionDecorator",
-                        "courseReferenceNumber": "20108",
-                        "faculty": [],
-                        "meetingTime": {
-                            "beginTime": "1000",
-                            "building": "OM",
-                            "buildingDescription": "Old Main Building",
-                            "campus": "K",
-                            "campusDescription": "Kamloops",
-                            "category": "01",
-                            "class": "net.hedtech.banner.general.overall.MeetingTimeDecorator",
-                            "courseReferenceNumber": "20108",
-                            "creditHourSession": 3.0,
-                            "endDate": "04/28/2018",
-                            "endTime": "1115",
-                            "friday": true,
-                            "hoursWeek": 2.5,
-                            "meetingScheduleType": "LEC",
-                            "monday": false,
-                            "room": "2622",
-                            "saturday": false,
-                            "startDate": "01/08/2018",
-                            "sunday": false,
-                            "term": "201820",
-                            "thursday": false,
-                            "tuesday": false,
-                            "wednesday": true
-                        },
-                        "term": "201820"
-                    }
-                ],
-                "openSection": true,
-                "partOfTerm": "1",
-                "scheduleTypeDescription": "Lecture",
-                "seatsAvailable": 1,
-                "sequenceNumber": "01",
-                "subject": "ACCT",
-                "subjectCourse": "ACCT1000",
-                "subjectDescription": "ACCT-Accounting",
-                "term": "201820",
-                "termDesc": "Winter 2018 (Jan-Apr)",
-                "waitAvailable": 94,
-                "waitCapacity": 100,
-                "waitCount": 6
-            },
-            {
-                "campusDescription": "Kamloops",
-                "courseNumber": "1000",
-                "courseReferenceNumber": "20109",
-                "courseTitle": "Financial Accounting (3,0,0)",
-                "creditHourHigh": null,
-                "creditHourIndicator": null,
-                "creditHourLow": 3,
-                "creditHours": null,
-                "crossList": null,
-                "crossListAvailable": null,
-                "crossListCapacity": null,
-                "crossListCount": null,
-                "enrollment": 39,
-                "faculty": [
-                    {
-                        "bannerId": "T00357838",
-                        "category": null,
-                        "class": "net.hedtech.banner.student.faculty.FacultyResultDecorator",
-                        "courseReferenceNumber": "20109",
-                        "displayName": "Noskova, Jana",
-                        "emailAddress": "jnoskova@tru.ca",
-                        "primaryIndicator": true,
-                        "term": "201820"
-                    }
-                ]
-
-
-'''

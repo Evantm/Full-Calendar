@@ -1,0 +1,45 @@
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Full Calendar Testing</title>
+<script type="text/javascript">
+	console.log(window.location.href);
+    var JSLink = "../Full Calendar/rooms/" + new URL(window.location.href).searchParams.get("room") + ".json";
+    var JSElement = document.createElement('script');
+    JSElement.src = JSLink;
+    JSElement.onload = OnceLoaded;
+    document.getElementsByTagName('head')[0].appendChild(JSElement);
+ function OnceLoaded() {
+
+    $('#calendar').fullCalendar({
+    	header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay,listWeek'
+      	},
+      navLinks: true, // can click day/week names to navigate views
+      nowIndicator: true,
+      editable: false,
+      eventLimit: true, // allow "more" link when too many events
+      eventClick: function(calEvent, jsEvent, view) {
+      		var start_date = moment(calEvent.start).format('DD/MM/YYYY HH:mm');
+      		var end_date = moment(calEvent.end).format('DD/MM/YYYY HH:mm');
+    		alert('Title: ' + calEvent.title +'\nStart: ' + start_date + '\nEnd: ' + end_date);
+  		}, 
+  	  height: 1000,
+      events: class_
+    });
+  }
+</script>
+</head>
+<body>
+
+<ul id='calendar'></div>
+
+
+</body>
+</html>

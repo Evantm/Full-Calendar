@@ -9,11 +9,17 @@
     <title>Full Calendar Testing</title>
     <script type="text/javascript">
         console.log(window.location.href);
-        var JSLink = "https://cdn.rawgit.com/Evantm/Full-Calendar/master/rooms/" + new URL(window.location.href).searchParams.get("room") + ".json";
+        var JSLink = "http://evanmackay.ca/Full-Calendar/rooms/" + new URL(window.location.href).searchParams.get("room") + ".json";
+
+
         var JSElement = document.createElement('script');
-        JSElement.src = JSLink;
-        JSElement.onload = OnceLoaded;
-        document.getElementsByTagName('head')[0].appendChild(JSElement);
+    	JSElement.src = JSLink;
+    	JSElement.onload = OnceLoaded;
+    	document.getElementsByTagName('head')[0].appendChild(JSElement);
+
+    	window.addEventListener('error', function(e) {
+    		document.getElementById('calendar').innerHTML= 'It broke';
+		}, true);
 
         function OnceLoaded() {
 

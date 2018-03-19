@@ -63,13 +63,13 @@ for subj in master_dict:
                         room_set.add(room_code)
                         #print(room_code,event)
 
-#room_list = list(room_set)
-#for room_ in room_list:
-#    out = []
-#    for room,classes in rooms.items():
-#        if room_ == room:
-#            for class_ in classes:
-#                day_dict = json.loads(class_)
-#                out.append(day_dict)
-#    with open(f'C:\\Users\\etmac\\OneDrive\\Desktop\\Programming\\Full Calendar\\rooms\\{room_}.json','w') as file:
-#        file.write( 'var class_ = ' +json.dumps(out,indent=4) + ';')
+room_list = list(room_set)
+for room_ in room_list:
+    out = []
+    for room,classes in rooms.items():
+        if room_ == room:
+            for class_ in classes:
+                day_dict = json.loads(class_)
+                out.append(day_dict)
+    with open(f'C:\\Users\\etmac\\OneDrive\\Desktop\\Programming\\Full Calendar\\rooms\\{room_}.json','w') as file:
+        file.write( 'var class_ = ' +json.dumps(out,indent=4) + ';')

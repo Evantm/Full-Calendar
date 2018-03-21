@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+import re
 import datetime as dt
 
 master_dict = {}
@@ -23,7 +24,6 @@ with open('201820.json','r') as file:
 for subj in master_dict:
     for section in master_dict[subj]['data']:
         subj = section['subjectCourse']
-        if(subj == 'COMP3610'): print(json.dumps(section,indent=4))
         if len(section['meetingsFaculty']) == 0: continue
 
         meeting_times = section['meetingsFaculty'][0]['meetingTime']
@@ -62,6 +62,19 @@ for subj in master_dict:
                         rooms[room_code] = room_list
                         room_set.add(room_code)
                         #print(room_code,event)
+
+room_list = list(room_set)
+build_dict = {}
+for room_ in room_list:
+    r = re.compile("([a-zA-Z]+)([0-9]+)")
+    match = r.match(room_)
+    if match is not None:
+        build_set = build_dict.get(match.group(1),set())
+        build_set.add(match.group(0))
+        build_dict[match.group(1)] = build_set
+
+for key in build_dict:
+    build_dict[key] = list(build_dict[key])
 
 room_list = list(room_set)
 for room_ in room_list:

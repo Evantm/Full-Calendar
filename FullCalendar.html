@@ -1,14 +1,18 @@
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css' />
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>
 <!DOCTYPE html>
 <html>
-
 <head>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css' />
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>
     <title>Full Calendar Testing</title>
     <script type="text/javascript">
-        var room = new URL(window.location.href).searchParams.get("room");
+        var url1 = new URL(window.location.href)
+        var room = "OM1360";
+        console.log(typeof url1.searchParams);
+        if(typeof url1.searchParams != 'undefined'){
+        	room = url1.searchParams.get("room");	
+        }
         var JSLink = "http://evanmackay.ca/Full-Calendar/rooms/" + room + ".json";
         class_ = '';
 

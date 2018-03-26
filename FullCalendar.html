@@ -11,7 +11,9 @@
         var room = "OM1360";
         console.log(typeof url1.searchParams);
         if(typeof url1.searchParams != 'undefined'){
-        	room = url1.searchParams.get("room");	
+        	room = url1.searchParams.get("room");
+        	console.log(room);
+        	room = room == null ? 'S261' : room;
         }
         var JSLink = "http://evanmackay.ca/Full-Calendar/rooms/" + room + ".json";
         class_ = '';
@@ -46,7 +48,7 @@
                     var end_date = moment(calEvent.end).format('DD/MM/YYYY HH:mm');
                     alert('Title: ' + calEvent.title + '\nStart: ' + start_date + '\nEnd: ' + end_date);
                 },
-                height: 1000,
+                height: 'auto',
                 defaultView: 'agendaWeek',
                 events: class_
             });

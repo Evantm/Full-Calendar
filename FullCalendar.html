@@ -15,7 +15,7 @@
         	console.log(room);
         	room = room == null ? 'S261' : room;
         }
-        var JSLink = "http://evanmackay.ca/Full-Calendar/rooms/" + room + ".json";
+        var JSLink = "https://evanmackay.ca/Full-Calendar/rooms/" + room + ".json";
         class_ = '';
 
         var JSElement = document.createElement('script');
@@ -94,7 +94,7 @@
             function updateRoom() {
                 var room = cityDropdown.find(':selected')[0].innerHTML ;
                 console.log(room);
-                $.getScript("http://evanmackay.ca/Full-Calendar/rooms/" + room + ".json", function(){
+                $.getScript("https://evanmackay.ca/Full-Calendar/rooms/" + room + ".json", function(){
                 	console.log(class_);
                 	$('#calendar').fullCalendar( 'removeEvents');
 					$('#calendar').fullCalendar( 'addEventSource', class_ );

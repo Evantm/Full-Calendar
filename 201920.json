@@ -1,15 +1,4 @@
 {
-    "ABTS": {
-        "success": false,
-        "totalCount": 0,
-        "data": [],
-        "pageOffset": 0,
-        "pageMaxSize": 500,
-        "sectionsFetchedCount": 0,
-        "pathMode": null,
-        "searchResultsConfigs": null,
-        "ztcEncodedImage": null
-    },
     "ACCT": {
         "success": false,
         "totalCount": 0,
@@ -55,6 +44,17 @@
         "ztcEncodedImage": null
     },
     "ANTH": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "APEC": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -142,6 +142,17 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
+    "CENG": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
     "CHBI": {
         "success": false,
         "totalCount": 0,
@@ -176,6 +187,17 @@
         "ztcEncodedImage": null
     },
     "COMP": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "COOK": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -241,6 +263,17 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
+    "EDAR": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
     "EDCO": {
         "success": false,
         "totalCount": 0,
@@ -274,7 +307,7 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
-    "EDIT": {
+    "EDIE": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -329,7 +362,29 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
+    "EDSM": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
     "EDSO": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "EDTE": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -363,6 +418,17 @@
         "ztcEncodedImage": null
     },
     "ENGL": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "ENGR": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -780,6 +846,17 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
+    "NAST": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
     "NRSC": {
         "success": false,
         "totalCount": 0,
@@ -891,6 +968,17 @@
         "ztcEncodedImage": null
     },
     "SCMN": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "SENG": {
         "success": false,
         "totalCount": 0,
         "data": [],

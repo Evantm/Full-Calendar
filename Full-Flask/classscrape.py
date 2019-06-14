@@ -4,10 +4,10 @@ from bs4 import BeautifulSoup
 import time
 import pickle
 
-def make_3_magic_requests(datecode,subj=False):
+def make_3_magic_requests(datecode):
 	first_url = 'https://banxessbprod.tru.ca/StudentRegistrationSsb/ssb/term/termSelection?mode=search'
-	if(not subj):
-		second_url = 'https://banxessbprod.tru.ca/StudentRegistrationSsb/ssb/searchResults/searchResults?txt_term={}&startDatepicker=&endDatepicker=&pageOffset=0&pageMaxSize=500&sortColumn=subjectDescription&sortDirection=asc'.format(datecode)
+
+	second_url = 'https://banxessbprod.tru.ca/StudentRegistrationSsb/ssb/searchResults/searchResults?txt_term={}&startDatepicker=&endDatepicker=&pageOffset=0&pageMaxSize=500&sortColumn=subjectDescription&sortDirection=asc'.format(datecode)
 	second_url = 'https://banxessbprod.tru.ca/StudentRegistrationSsb/ssb/searchResults/searchResults?txt_subject={}&txt_term={}&startDatepicker=&endDatepicker=&pageOffset=0&pageMaxSize=500&sortColumn=subjectDescription&sortDirection=asc'.format(subj,datecode)
 
 

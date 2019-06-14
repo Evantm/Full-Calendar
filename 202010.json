@@ -1,15 +1,4 @@
 {
-    "ABTS": {
-        "success": false,
-        "totalCount": 0,
-        "data": [],
-        "pageOffset": 0,
-        "pageMaxSize": 500,
-        "sectionsFetchedCount": 0,
-        "pathMode": null,
-        "searchResultsConfigs": null,
-        "ztcEncodedImage": null
-    },
     "ACCT": {
         "success": false,
         "totalCount": 0,
@@ -32,7 +21,7 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
-    "AGSC": {
+    "ANHD": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -55,6 +44,17 @@
         "ztcEncodedImage": null
     },
     "ANTH": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "APSC": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -98,17 +98,6 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
-    "ASUR": {
-        "success": false,
-        "totalCount": 0,
-        "data": [],
-        "pageOffset": 0,
-        "pageMaxSize": 500,
-        "sectionsFetchedCount": 0,
-        "pathMode": null,
-        "searchResultsConfigs": null,
-        "ztcEncodedImage": null
-    },
     "BIOL": {
         "success": false,
         "totalCount": 0,
@@ -132,6 +121,17 @@
         "ztcEncodedImage": null
     },
     "BUSN": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "CENG": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -197,18 +197,7 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
-    "CYCA": {
-        "success": false,
-        "totalCount": 0,
-        "data": [],
-        "pageOffset": 0,
-        "pageMaxSize": 500,
-        "sectionsFetchedCount": 0,
-        "pathMode": null,
-        "searchResultsConfigs": null,
-        "ztcEncodedImage": null
-    },
-    "DAAD": {
+    "DRAF": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -274,7 +263,18 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
-    "EDIT": {
+    "EDFN": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "EDIE": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -307,6 +307,17 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
+    "EDPE": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
     "EDPR": {
         "success": false,
         "totalCount": 0,
@@ -318,7 +329,7 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
-    "EDSC": {
+    "EDSL": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -329,7 +340,18 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
-    "EDSO": {
+    "EDSM": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "EDTE": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -362,7 +384,29 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
+    "EDVP": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
     "ENGL": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "ENGR": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -483,17 +527,6 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
-    "FNST": {
-        "success": false,
-        "totalCount": 0,
-        "data": [],
-        "pageOffset": 0,
-        "pageMaxSize": 500,
-        "sectionsFetchedCount": 0,
-        "pathMode": null,
-        "searchResultsConfigs": null,
-        "ztcEncodedImage": null
-    },
     "FRAN": {
         "success": false,
         "totalCount": 0,
@@ -594,17 +627,6 @@
         "ztcEncodedImage": null
     },
     "HMGT": {
-        "success": false,
-        "totalCount": 0,
-        "data": [],
-        "pageOffset": 0,
-        "pageMaxSize": 500,
-        "sectionsFetchedCount": 0,
-        "pathMode": null,
-        "searchResultsConfigs": null,
-        "ztcEncodedImage": null
-    },
-    "HORT": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -846,17 +868,6 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
-    "PNUR": {
-        "success": false,
-        "totalCount": 0,
-        "data": [],
-        "pageOffset": 0,
-        "pageMaxSize": 500,
-        "sectionsFetchedCount": 0,
-        "pathMode": null,
-        "searchResultsConfigs": null,
-        "ztcEncodedImage": null
-    },
     "POLI": {
         "success": false,
         "totalCount": 0,
@@ -890,7 +901,29 @@
         "searchResultsConfigs": null,
         "ztcEncodedImage": null
     },
+    "RFAC": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
     "SCMN": {
+        "success": false,
+        "totalCount": 0,
+        "data": [],
+        "pageOffset": 0,
+        "pageMaxSize": 500,
+        "sectionsFetchedCount": 0,
+        "pathMode": null,
+        "searchResultsConfigs": null,
+        "ztcEncodedImage": null
+    },
+    "SENG": {
         "success": false,
         "totalCount": 0,
         "data": [],
@@ -1023,17 +1056,6 @@
         "ztcEncodedImage": null
     },
     "VISA": {
-        "success": false,
-        "totalCount": 0,
-        "data": [],
-        "pageOffset": 0,
-        "pageMaxSize": 500,
-        "sectionsFetchedCount": 0,
-        "pathMode": null,
-        "searchResultsConfigs": null,
-        "ztcEncodedImage": null
-    },
-    "WTTP": {
         "success": false,
         "totalCount": 0,
         "data": [],

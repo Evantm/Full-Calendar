@@ -52,13 +52,13 @@ def make_3_magic_requests(datecode,subj=False):
 	header2['X-Synchronizer-Token'] = token
 	header2['Cookie'] = 'JSESSIONID'+'='+my_session.cookies['JSESSIONID']
 
-	my_session.post('https://banxessbprod.tru.ca:8443/StudentRegistrationSsb/ssb/term/search?mode=search',data='term={}&studyPath=&studyPathText=&startDatepicker=&endDatepicker='.format(datecode),headers=header2)
+	my_session.post('https://banxessbprod.tru.ca/StudentRegistrationSsb/ssb/term/search?mode=search',data='term={}&studyPath=&studyPathText=&startDatepicker=&endDatepicker='.format(datecode),headers=header2)
 
 	final = my_session.get(second_url,headers=header)
 	return json.loads(final.text)
 
 def get_subj_set(datecode):
-	url = 'https://banxessbprod.tru.ca:8443/StudentRegistrationSsb/ssb/classSearch/get_subject?searchTerm=&term={}&offset=1&max=500&_=1515716220635'.format(datecode)
+	url = 'https://banxessbprod.tru.ca/StudentRegistrationSsb/ssb/classSearch/get_subject?searchTerm=&term={}&offset=1&max=500&_=1515716220635'.format(datecode)
 	class_page = requests.get(url).text
 	subj_list = json.loads(class_page)
 	crses = [i['code'] for i in subj_list]
@@ -66,7 +66,7 @@ def get_subj_set(datecode):
 
 def get_semesters():
 	#dont have to make a session or anything for this
-	url = "https://banxessbprod.tru.ca:8443/StudentRegistrationSsb/ssb/classSearch/getTerms?searchTerm=&offset=1&max=500"
+	url = "https://banxessbprod.tru.ca/StudentRegistrationSsb/ssb/classSearch/getTerms?searchTerm=&offset=1&max=500"
 	r = requests.get(url)
 	semesters = json.loads(r.text)
 	return semesters

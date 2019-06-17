@@ -80,9 +80,10 @@ def get_classes_for_semester(timecode):
 	for course in courses:
 
 		contents = make_3_magic_requests(date,course)
-
-		output.append({course:contents})
 		print(date,course)
+		for content in contents:
+			print(content)
+		output.append({course:contents})
 		
 	print(contents)
 	pickle.dump(output,file)

@@ -75,18 +75,27 @@ def get_classes_for_semester(timecode):
 	num = 0
 	output = []
 	date = timecode
-	file = open(date+'.pic','wb') 
-	courses = [i for i in get_subj_set(date)]
-	for course in courses:
+	# file = open(date+'.pic','wb') 
+	# courses = [i for i in get_subj_set(date)]
+	# for course in courses:
 
-		contents = make_3_magic_requests(date,course)
+	# 	contents = make_3_magic_requests(date,course)
 
-		output.append({course:contents})
-		print(date,course)
-		
-	print(contents)
-	pickle.dump(output,file)
-	file.close()
+	# 	output.append({course:contents})
+	# 	print(date,course)
+	# pickle.dump(output,file)
+	# file.close()
+
+
+	with open(f'{date}.json','w') as json_file:
+		courses = [i for i in get_subj_set(date)]
+		for course in courses:
+			contents = make_3_magic_requests(date,course)
+			output.append({course:contents})
+			print(course,date)
+
+		out = json.dumps(output,indent=4)
+		json_file.write(out)
 
 def main():
 	semesters = get_semesters()

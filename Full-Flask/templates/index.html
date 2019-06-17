@@ -1,0 +1,100 @@
+c<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css' />
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>
+    <title>Full Calendar Testing</title>
+    <script type="text/javascript">
+        function OnceLoaded() {
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay,listWeek'
+                },
+                navLinks: true, // can click day/week names to navigate views
+                nowIndicator: true,
+                editable: false,
+                eventLimit: true, // allow "more" link when too many events
+                eventClick: function(calEvent, jsEvent, view) {
+                    var start_date = moment(calEvent.start).format('DD/MM/YYYY HH:mm');
+                    var end_date = moment(calEvent.end).format('DD/MM/YYYY HH:mm');
+                    alert('Title: ' + calEvent.title + '\nStart: ' + start_date + '\nEnd: ' + end_date);
+                },
+                height: 'auto',
+                defaultView: 'agendaWeek',
+                events: class_
+            });
+            dropdown();
+        }
+
+        function dropdown() { // wait for page to load
+        	//countries are buildings
+        	//cities are rooms
+        	
+            var cityDropdown = $("#rooms"),
+                countryDropdown = $('<select></select>'), // create a country dropdown
+                countries = ['OM', 'AHT', 'AE', 'WL', 'CTT', 'S', 'IB', 'HOL', 'OL']; // ordered list of countries
+
+            // parse the nested dropdown
+            cityDropdown.children().each(function() {
+                var group = $(this),
+                    countryName = group.attr('label'),
+                    option;
+
+                option = $('<option></option>').text(countryName);
+
+                option.data('cities', group.children());
+
+                if (group.find(':selected').length > 0) {
+                    option.prop('selected', true);
+                }
+
+                countryDropdown.append(option);
+            });
+
+            // add the country dropdown to the page
+            cityDropdown.before(countryDropdown);
+
+            // this function updates the city dropdown based on the selected country
+            function updateCities() {
+                var country = countryDropdown.find(':selected');
+                cityDropdown.empty().append(country.data('cities'));
+                console.log(country[0].innerHTML);
+            }
+
+            function updateRoom() {
+                var room = cityDropdown.find(':selected')[0].innerHTML ;
+                console.log(room);
+                $.getScript("https://evanmackay.ca/Full-Calendar/rooms/" + room + ".json", function(){
+                	console.log(class_);
+                	$('#calendar').fullCalendar( 'removeEvents');
+					$('#calendar').fullCalendar( 'addEventSource', class_ );
+                });
+
+			}
+
+
+            // call the function to set the initial cities
+            updateCities();
+
+            // and add the change handler
+            countryDropdown.on('change', updateCities);
+            cityDropdown.on('click', updateRoom);
+        }
+    </script>
+</head>
+
+<body>
+
+    <select id="rooms">
+
+
+</select>
+    <ul id='calendar'>
+</body>
+
+</html>
